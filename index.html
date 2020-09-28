@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Irrigation in Lunsemfwa River Basin, Zambia</title>
+  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/build/ol.js">
+    import 'ol/ol.css';
+    import Map from 'ol/Map';
+    import View from 'ol/View';
+    import { Image as ImageLayer, Tile as TileLayer } from 'ol/layer';
+    import ImageWMS from 'ol/source/ImageWMS';
+    import ImageWMTS from 'ol/source/ImageWMTS';
+    import OSM from 'ol/source/OSM';
+    import * as olExtent from 'ol/extent';
+    import {getCenter} from 'ol/extent'
+    import TileLayer from 'ol/layer/Tile';
+    import XYZ from 'ol/source/XYZ';
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/css/ol.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Map of the large-scale irrigated features in the Lunsemfwa River Basin </h1>
+  </header>
+
+  <p id="intro">
+    <br>
+    Map displaying the irrigated surfaces in Zambia.
+    <br><br>
+  </p>
+
+  <div id="map" class="map"></div>
+
+  <div class="generic-map-widget">
+    <div id="year-label" class="badge">Year</div>
+    <div id="timeframe-label" class="badge">Frame</div>
+    <select  id="class-year" class="badge-select">
+      <option value="2018">2018</option>
+      <option value="2013">2013</option>
+    </select> 
+    / 
+    <select id="timeframe" class="badge-select" >
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+  </div>
+
+  <div class="legend">
+    <span id="irrigated" class="legend-element">Irrigated</span> <span id="non-irrigated"
+      class="legend-element">Non-irrigated</span>
+  </div>
+
+  <div class="info-panel">
+    <div class="Province">
+    </div>
+  </div>
+  <script src="app.js" charset="utf-8"></script>
+
+</body>
+
+</html>
