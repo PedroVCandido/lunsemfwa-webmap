@@ -84,7 +84,10 @@ document.getElementById('slider').addEventListener('input', function(e) {
   for (var i = 0; i <= len; i++) {
     var layer = LayerIds[i];
     map.setLayoutProperty(layer, 'visibility', 'visible');
-    if layer === ""
+    if (layer.substring(1) <=  year){
+      map.setLayoutProperty(layer, 'visibility', 'visible');
+      
+    }
     
     
     }
