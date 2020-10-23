@@ -54,21 +54,16 @@ irrigated_div.addEventListener("click", function () {
     if(layer === currentLayer) {
         if (vis === 'visible') {
         map.setLayoutProperty(layer, 'visibility', 'none');
-  
+        } else {
+        map.setLayoutProperty(layer, 'visibility', 'visible');  
         }
-
-    
-    if (vis === 'visible') {
+    }
+    else if (vis === 'visible') {
     map.setLayoutProperty(layer, 'visibility', 'none');
     } 
     
-  }
-    
-  var vis = map.getLayoutProperty(currentLayer, 'visibility');
-  if (vis !== 'visible') {
-    map.setLayoutProperty(currentLayer, 'visibility', 'visible');
-  };
-
+  } 
+  
   
 });
 
