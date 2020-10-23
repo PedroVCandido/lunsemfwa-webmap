@@ -37,28 +37,27 @@ function removeLayers(map) {
 
 
 //EVENT LISTENERS
-var current_layer = 2;
+var currentLayer = "Y2018";
 
 irrigated_div.addEventListener("click", function () {
-  if (map.getLayers().getArray()[1] == undefined) {
-    map.addLayer(current_layer)
-    // console.log(JSON.stringify(current_layer));
+  if (map.getLayer()[1] == undefined) {
+    map.addLayer(currentLayer)
   }
   else {
     return
   };
 });
 
-nonIrrigated_div.addEventListener("click", function () {
-  current_layer = map.getLayers().getArray()[1]
-  removeLayers(map);
-});
+// nonIrrigated_div.addEventListener("click", function () {
+//   current_layer = map.getLayers().getArray()[1]
+//   removeLayers(map);
+// });
 
 
 
 yearSelect_div.addEventListener("change", function () {
   var current_index = yearSelect_div.selectedIndex;
-  var year = yearSelect_div.selectedIndex.text;
+  var year = yearSelect_div.options[current_index].text;
   var layer = "Y"+ year;
   var visibility = map.getLayoutProperty(layer, 'visibility');
   
@@ -72,6 +71,7 @@ yearSelect_div.addEventListener("change", function () {
   else {
       removeLayers(map);
       map.setLayoutProperty(layer,'visibility', 'visible');
+      currentLayer = layer;    
     }
 
 });
