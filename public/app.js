@@ -74,14 +74,14 @@ yearSelect_div.addEventListener("change", function () {
   var layer = "Y"+ year;
   var visibility = map.getLayoutProperty(layer, 'visibility');
   
-  if (visibility === 'visible') {
-      return;
-  }
-  else {
-      removeLayers(map);
-      map.setLayoutProperty(layer,'visibility', 'visible');
-      currentLayer = layer;    
-    }
+  // if (visibility === 'visible') {
+  //     return;
+  // }
+  // else {
+  removeLayers(map);
+  map.setLayoutProperty(layer,'visibility', 'visible');
+  currentLayer = layer;    
+    // }
 
 });
 
