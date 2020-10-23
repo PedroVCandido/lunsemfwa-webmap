@@ -13,7 +13,7 @@
 }
 
 body {
-  background-color: #24272E;
+  background-color: #162131;
 }
 
 header {
@@ -41,13 +41,13 @@ header>h1 {
 
 .badge {
   padding: 2px 2px;
-  background: #24272E;
+  background: #162131;
   transition: all 0.3s ease;
 }
 
 .badge-select {
   padding: 2px 2px;
-  background: #24272E;
+  background: #162131;
   color: white; 
   font-size: 18px;
   transition: all 0.3s ease;
@@ -57,7 +57,7 @@ header>h1 {
 .badge-select:hover {
   cursor: pointer;
   background:white;
-  color:#24272E;
+  color:#162131;
 }
 
 #intro {
@@ -93,7 +93,7 @@ header>h1 {
 
 
 .legend-element {
-  background:  #24272E;
+  background:  #162131;
   color:white;
   border: 1px solid white;
   padding: 4px;
@@ -105,7 +105,7 @@ header>h1 {
 .legend-element:hover{
   cursor: pointer;
   background:white;
-  color:#24272E;
+  color:#162131;
 }
 
 

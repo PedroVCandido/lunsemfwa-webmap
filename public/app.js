@@ -41,9 +41,9 @@ var currentLayer = "Y2018";
 
 
 irrigated_div.addEventListener("click", function () {
-  var visibility = map.getLayoutProperty(currentLayer, 'visibility');
+  var vis = map.getLayoutProperty(currentLayer, 'visibility');
   
-  if (visibility === 'visible') {
+  if (vis === 'visible') {
     map.setLayoutProperty(currentLayer, 'visibility', 'none');
   }
   else {
