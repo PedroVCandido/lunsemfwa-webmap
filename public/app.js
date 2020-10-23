@@ -25,15 +25,14 @@ var map = new mapboxgl.Map({
 
 
 //REMOVE LAYERS
-function removeLayers(map) {
-  var len = 11;
-  var visibility = map.getLayoutProperty(layer, 'visibility');
+var LayerIds = ['Y2018', 'Y2017', 'Y2016', 'Y2015', 'Y2014', 'Y2013', 'Y2008', 'Y2004', 'Y2002', 'Y1998', 'Y1993' ];
 
-  for (var i = 1; i < len; i++) {
-    if (map.getLayer().getArray()[i]) {
-      map.removeLayer(map.getLayers().getArray()[i]);
+function removeLayers(map) {
+  var len = LayerIds.length;
+  for (var i = 0; i <= len; i++) {
+    var layer = LayerIds[i];
+    map.setLayoutProperty(layer, 'visibility', 'none');
     }
-  }
 };
 
 
@@ -56,7 +55,6 @@ nonIrrigated_div.addEventListener("click", function () {
 });
 
 
-var toggleableLayerIds = ['contours', 'museums'];
 
 yearSelect_div.addEventListener("change", function () {
   var current_index = yearSelect_div.selectedIndex;
