@@ -30,7 +30,7 @@ header>h1 {
 .generic-map-widget {
   border: 6px solid white;
   margin: 20px auto;
-  width: 200px;
+  width: 400px;
   color: white;
   font-size: 24;
   text-align: center;
@@ -72,7 +72,7 @@ header>h1 {
   padding: 5px;
   position: absolute;
   bottom: -20px;
-  right: 40%
+  right: 65%
 }
 
 #toggle-label {
@@ -81,7 +81,16 @@ header>h1 {
   padding: 5px;
   position: absolute;
   bottom: -20px;
-  right: 5%
+  right: 45%
+}
+
+#cumulative-label {
+  border: 4px solid white;
+  border-radius: 50%;
+  padding: 5px;
+  position: absolute;
+  bottom: -20px;
+  right: 15%
 }
 
 .legend{
