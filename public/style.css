@@ -27,7 +27,7 @@ header>h1 {
   font-family: Asap, sans-serif;
 }
 
-/* .generic-map-widget {
+.generic-map-widget {
   border: 6px solid white;
   margin: 20px auto;
   width: 200px;
@@ -37,7 +37,7 @@ header>h1 {
   border-radius: 4px;
   padding: 20px;
   position: relative;
-} */
+}
 
 .badge {
   padding: 2px 2px;
