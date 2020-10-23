@@ -28,8 +28,11 @@
  
 
   <div class="generic-map-widget">
+    
     <div id="year-label" class="badge">Year</div>
-    <div id="timeframe-label" class="badge">Frame</div>
+    
+    <div id="toggle-label" class="badge">Toggle</div>
+
     <select  id="class-year" class="badge-select">
       <option value="2018">2018</option>
       <option value="2017">2017</option>
@@ -44,17 +47,15 @@
       <option value="1993">1993</option>
 
     </select> 
-    / 
-    <select id="timeframe" class="badge-select" >
-      <option value="1">1</option>
-      <option value="2">2</option>
-    </select>
+    
+<!--     <div class="legend"> -->
+    <span id="irrigated" class="legend-element">Irrigated</span> 
+    
+<!--   </div> -->
+    
   </div>
 
-  <div class="legend">
-    <span id="irrigated" class="legend-element">Irrigated</span> <span id="non-irrigated"
-      class="legend-element">Non-irrigated</span>
-  </div>
+  
 
   <div class="info-panel">
     <div class="Province">
