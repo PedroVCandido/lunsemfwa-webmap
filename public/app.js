@@ -1,8 +1,7 @@
 import mapboxgl from 'mapbox-gl';
 
 //Caching the DOM
-const timeFrame_select = document.getElementById("timeframe");
-const classYear_select = document.getElementById("class-year");
+const yearSelect_div= document.getElementById("class-year");
 
 const irrigated_div = document.getElementById("irrigated");
 const nonIrrigated_div = document.getElementById("non-irrigated");
