@@ -38,7 +38,7 @@ function removeLayers(map) {
 
 //EVENT LISTENERS
 var currentLayer = "Y2018";
-map.on('styledata', function() {
+map.on('load', function() {
   map.setLayoutProperty(currentLayer, 'visibility', 'visible');
 });
 
