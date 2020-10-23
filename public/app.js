@@ -54,23 +54,22 @@ nonIrrigated_div.addEventListener("click", function () {
 });
 
 
+var toggleableLayerIds = ['contours', 'museums'];
 
+yearSelect_div.addEventListener("change", function () {
+  var current_index = yearSelect_div.selectedIndex;
+  if (yearSelect_div.options[current_index].text == "2013") {
+    if (map.getLayers().getArray()[1] == irrig2013) {
+      return
+    }
+    else {
+      removeLayers(map);
+      map.addLayer(irrig2013);
+    }
+  }
 
+else {
+    return
+  }
 
-// yearSelect_div.addEventListener("change", function () {
-//   var current_index = yearSelect_div.selectedIndex;
-//   if (yearSelect_div.options[current_index].text == "2013") {
-//     if (map.getLayers().getArray()[1] == irrig2013) {
-//       return
-//     }
-//     else {
-//       removeLayers(map);
-//       map.addLayer(irrig2013);
-//     }
-//   }
-
-// else {
-//     return
-//   }
-
-// });
+});
