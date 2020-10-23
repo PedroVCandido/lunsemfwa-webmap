@@ -21,8 +21,7 @@ var map = new mapboxgl.Map({
   zoom: 7.5,
   minZoom: 4, 
   maxZoom: 14
-}).then()=>{map.setLayoutProperty(currentLayer, 'visibility', 'visible');
-};
+});
 
 
 //REMOVE LAYERS
@@ -39,7 +38,9 @@ function removeLayers(map) {
 
 //EVENT LISTENERS
 var currentLayer = "Y2018";
-
+map.on('styledata', function() {
+  map.setLayoutProperty(currentLayer, 'visibility', 'visible');
+});
 
 irrigated_div.addEventListener("click", function () {
   var vis = map.getLayoutProperty(currentLayer, 'visibility');
