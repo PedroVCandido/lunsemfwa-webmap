@@ -30,17 +30,17 @@ header>h1 {
 .generic-map-widget {
   border: 6px solid white;
   margin: 20px auto;
-  width: 400px;
+  width: 500px;
   color: white;
   font-size: 24;
   text-align: center;
   border-radius: 4px;
-  padding: 20px;
+  padding: 30px;
   position: relative;
 }
 
 .badge {
-  padding: 2px 2px;
+  padding: 4px 4px;
   background: #162131;
   transition: all 0.3s ease;
 }
@@ -92,6 +92,21 @@ header>h1 {
   bottom: -20px;
   right: 15%
 }
+
+#sliderbar {
+  border: 1px solid white;
+  padding: 5px;
+  background:  #162131;
+  color:white;
+  transition: all 0.5s ease;
+}
+
+#sliderbar:hover{
+  cursor: pointer;
+  background:white;
+  color:#162131;
+}
+
 
 .legend{
   margin: 20px 20px auto;
