@@ -43,17 +43,28 @@ map.on('load', function() {
   map.setLayoutProperty(currentLayer, 'visibility', 'visible');
 });
 
-irrigated_div.addEventListener("click", function () {
-  var vis = map.getLayoutProperty(currentLayer, 'visibility');
-  
-  if (vis === 'visible') {
-    map.setLayoutProperty(currentLayer, 'visibility', 'none');
-  }
-  else {
-    map.setLayoutProperty(currentLayer, 'visibility', 'visible');
-  };
-});
 
+irrigated_div.addEventListener("click", function () {
+  
+  var len = LayerIds.length;
+  for (var i = 0; i < len; i++) {
+    var layer = LayerIds[i];
+    map.setLayoutProperty(layer, 'visibility', 'none');
+    
+    var vis = map.getLayoutProperty(layer, 'visibility');
+    
+    if (vis === 'visible') {
+    map.setLayoutProperty(currentLayer, 'visibility', 'none');
+    }
+    else {
+      map.setLayoutProperty(currentLayer, 'visibility', 'visible');
+    };
+
+    }
+
+  
+  
+});
 
 
 yearSelect_div.addEventListener("change", function () {
@@ -65,10 +76,6 @@ yearSelect_div.addEventListener("change", function () {
   if (visibility === 'visible') {
       return;
   }
-
-  // else if (yearSelect_div.options[current_index].text == "2018") {
-  //     return
-  //   }
   else {
       removeLayers(map);
       map.setLayoutProperty(layer,'visibility', 'visible');
@@ -76,6 +83,7 @@ yearSelect_div.addEventListener("change", function () {
     }
 
 });
+
 
 document.getElementById('slider').addEventListener('input', function(e) {
   var year = parseInt(e.target.value);
