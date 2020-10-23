@@ -45,24 +45,30 @@ map.on('load', function() {
 
 
 irrigated_div.addEventListener("click", function () {
-  
   var len = LayerIds.length;
   for (var i = 0; i < len; i++) {
     var layer = LayerIds[i];
-    map.setLayoutProperty(layer, 'visibility', 'none');
     
     var vis = map.getLayoutProperty(layer, 'visibility');
     
-    if (vis === 'visible') {
-    map.setLayoutProperty(currentLayer, 'visibility', 'none');
-    }
-    else {
-      map.setLayoutProperty(currentLayer, 'visibility', 'visible');
-    };
-
-    }
-
+    if(layer === currentLayer) {
+        if (vis === 'visible') {
+        map.setLayoutProperty(layer, 'visibility', 'none');
   
+        }
+
+    
+    if (vis === 'visible') {
+    map.setLayoutProperty(layer, 'visibility', 'none');
+    } 
+    
+  }
+    
+  var vis = map.getLayoutProperty(currentLayer, 'visibility');
+  if (vis !== 'visible') {
+    map.setLayoutProperty(currentLayer, 'visibility', 'visible');
+  };
+
   
 });
 
