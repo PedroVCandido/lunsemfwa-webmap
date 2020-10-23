@@ -17,11 +17,38 @@ mapboxgl.accessToken ='pk.eyJ1IjoicGVkcm92aWVpcmFjIiwiYSI6ImNrZnkxODhoNzF3MHYzNn
 var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/pedrovieirac/ckfy19zk40s1m19t3xgbvrj59',
-  center: [28,-14.50],
-  zoom: 7
+  center: [29,-14],
+  zoom: 7.5
 });
 
-// CONSTRUCTION OF LAYER OBJECTS
 
+//REMOVE LAYERS
+function removeLayers(map) {
+  var len = map.getLayers().getArray().length;
+  for (var i = 1; i < len; i++) {
+    if (map.getLayers().getArray()[i]) {
+      map.removeLayer(map.getLayers().getArray()[i]);
+    }
+  }
+};
+
+
+//EVENT LISTENERS
+var current_layer = 2;
+
+irrigated_div.addEventListener("click", function () {
+  if (map.getLayers().getArray()[1] == undefined) {
+    map.addLayer(current_layer)
+    // console.log(JSON.stringify(current_layer));
+  }
+  else {
+    return
+  };
+});
+
+nonIrrigated_div.addEventListener("click", function () {
+  current_layer = map.getLayers().getArray()[1]
+  removeLayers(map);
+});
 
 
