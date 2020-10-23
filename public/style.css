@@ -48,6 +48,7 @@ header>h1 {
 .badge-select {
   padding: 2px 2px;
   background: #162131;
+  border: 1px solid white;
   color: white; 
   font-size: 18px;
   transition: all 0.3s ease;
@@ -96,7 +97,7 @@ header>h1 {
   background:  #162131;
   color:white;
   border: 1px solid white;
-  padding: 4px;
+  padding: 5px;
   transition: all 0.3s ease;
 
   /* position: absolute; */

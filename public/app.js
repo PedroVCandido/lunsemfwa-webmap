@@ -21,7 +21,8 @@ var map = new mapboxgl.Map({
   zoom: 7.5,
   minZoom: 4, 
   maxZoom: 14
-});
+}).then()=>{map.setLayoutProperty(currentLayer, 'visibility', 'visible');
+};
 
 
 //REMOVE LAYERS
