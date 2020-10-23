@@ -58,8 +58,15 @@ var toggleableLayerIds = ['contours', 'museums'];
 
 yearSelect_div.addEventListener("change", function () {
   var current_index = yearSelect_div.selectedIndex;
-  if (yearSelect_div.options[current_index].text == "2013") {
-    if (map.getLayers().getArray()[1] == irrig2013) {
+  var year = yearSelect_div.selectedIndex.text;
+  var layer = "Y"+ year;
+  var visibility = map.getLayoutProperty(layer, 'visibility');
+  
+  if (visibility === 'visible') {
+      return;
+  }
+  
+  else if (yearSelect_div.options[current_index].text == "2018") {
       return
     }
     else {
