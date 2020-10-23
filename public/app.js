@@ -39,19 +39,17 @@ function removeLayers(map) {
 //EVENT LISTENERS
 var currentLayer = "Y2018";
 
+
 irrigated_div.addEventListener("click", function () {
-  if (map.getLayer()[1] == undefined) {
-    map.addLayer(currentLayer)
+  var visibility = map.getLayoutProperty(currentLayer, 'visibility');
+  
+  if (visibility === 'visible') {
+    map.setLayoutProperty(currentLayer, 'visibility', 'none');
   }
   else {
-    return
+    map.setLayoutProperty(currentLayer, 'visibility', 'visible');
   };
 });
-
-// nonIrrigated_div.addEventListener("click", function () {
-//   current_layer = map.getLayers().getArray()[1]
-//   removeLayers(map);
-// });
 
 
 
