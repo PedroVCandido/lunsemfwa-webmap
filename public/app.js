@@ -21,3 +21,8 @@ var map = new mapboxgl.Map({
   center: [28,-14.50],
   zoom: 7
 });
+
+// CONSTRUCTION OF LAYER OBJECTS
+
+
+
