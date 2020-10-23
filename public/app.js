@@ -1,4 +1,4 @@
-import mapboxgl from 'mapbox-gl';
+// import mapboxgl from 'mapbox-gl';
 
 //Caching the DOM
 const yearSelect_div= document.getElementById("class-year");
@@ -26,9 +26,11 @@ var map = new mapboxgl.Map({
 
 //REMOVE LAYERS
 function removeLayers(map) {
-  var len = map.getLayers().getArray().length;
+  var len = 11;
+  var visibility = map.getLayoutProperty(layer, 'visibility');
+
   for (var i = 1; i < len; i++) {
-    if (map.getLayers().getArray()[i]) {
+    if (map.getLayer().getArray()[i]) {
       map.removeLayer(map.getLayers().getArray()[i]);
     }
   }
@@ -65,18 +67,13 @@ yearSelect_div.addEventListener("change", function () {
   if (visibility === 'visible') {
       return;
   }
-  
-  else if (yearSelect_div.options[current_index].text == "2018") {
-      return
-    }
-    else {
-      removeLayers(map);
-      map.addLayer(irrig2013);
-    }
-  }
 
-else {
-    return
-  }
+  // else if (yearSelect_div.options[current_index].text == "2018") {
+  //     return
+  //   }
+  else {
+      removeLayers(map);
+      map.setLayoutProperty(layer,'visibility', 'visible');
+    }
 
 });
