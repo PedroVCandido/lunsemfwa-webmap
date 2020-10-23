@@ -4,20 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>Irrigation in Lunsemfwa River Basin, Zambia</title>
-  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/build/ol.js">
-    import 'ol/ol.css';
-    import Map from 'ol/Map';
-    import View from 'ol/View';
-    import { Image as ImageLayer, Tile as TileLayer } from 'ol/layer';
-    import ImageWMS from 'ol/source/ImageWMS';
-    import ImageWMTS from 'ol/source/ImageWMTS';
-    import OSM from 'ol/source/OSM';
-    import * as olExtent from 'ol/extent';
-    import {getCenter} from 'ol/extent'
-    import TileLayer from 'ol/layer/Tile';
-    import XYZ from 'ol/source/XYZ';
-  </script>
-  <link rel="stylesheet" href="style.css" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+     <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/css/ol.css">
 </head>
 
@@ -34,6 +23,8 @@
   </p>
 
   <div id="map" class="map"></div>
+  
+ 
 
   <div class="generic-map-widget">
     <div id="year-label" class="badge">Year</div>

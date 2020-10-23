@@ -1,19 +1,5 @@
-// import 'ol/ol.css';
-// import Map from 'ol/Map';
-// import View from 'ol/View';
-// import {Image as ImageLayer, Tile as TileLayer} from 'ol/layer';
-// import ImageWMS from 'ol/source/ImageWMS';
-// import OSM from 'ol/source/OSM';
-
-
-//Constant(s) for dynamic styling
-var sldBody =
-  '<?xml version="1.0" encoding="ISO-8859-1"?> <StyledLayerDescriptor version="1.0.0" xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd" xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <NamedLayer> <Name>Two color gradient</Name> <UserStyle> <Title>SLD Cook Book: Two color gradient</Title> <FeatureTypeStyle> <Rule> <RasterSymbolizer> <ColorMap> <ColorMapEntry color="#008000" quantity="1" /> <ColorMapEntry color="#663333" quantity="2" /> </ColorMap> </RasterSymbolizer> </Rule> </FeatureTypeStyle> </UserStyle> </NamedLayer> </StyledLayerDescriptor>'
-//TODO: change dynamically for multiple colored images and years
 
 //Caching the DOM
-console.log("Cassiopeia");
-
 const timeFrame_select = document.getElementById("timeframe");
 const classYear_select = document.getElementById("class-year");
 
