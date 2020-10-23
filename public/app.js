@@ -29,7 +29,7 @@ var LayerIds = ['Y2018', 'Y2017', 'Y2016', 'Y2015', 'Y2014', 'Y2013', 'Y2008', '
 
 function removeLayers(map) {
   var len = LayerIds.length;
-  for (var i = 0; i <= len; i++) {
+  for (var i = 0; i < len; i++) {
     var layer = LayerIds[i];
     map.setLayoutProperty(layer, 'visibility', 'none');
     }
@@ -81,22 +81,15 @@ document.getElementById('slider').addEventListener('input', function(e) {
   var year = parseInt(e.target.value);
   // update the map
   var len = LayerIds.length;
-  for (var i = 0; i <= len; i++) {
+  for (var i = 0; i < len; i++) {
     var layer = LayerIds[i];
-    map.setLayoutProperty(layer, 'visibility', 'visible');
     if (layer.substring(1) <=  year){
       map.setLayoutProperty(layer, 'visibility', 'visible');
-      
     }
-    
-    
-    }
-
-
-  // // converting 0-23 hour to AMPM format
-  // var ampm = hour >= 12 ? 'PM' : 'AM';
-  // var hour12 = hour % 12 ? hour % 12 : 12;
-
+    else{
+      map.setLayoutProperty(layer, 'visibility', 'none');
+    }   
+  }
   // update text in the UI
   document.getElementById('active-year').innerText = year;
 });
