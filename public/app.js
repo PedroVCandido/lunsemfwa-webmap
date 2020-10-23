@@ -38,6 +38,7 @@ function removeLayers(map) {
 
 //EVENT LISTENERS
 var currentLayer = "Y2018";
+
 map.on('load', function() {
   map.setLayoutProperty(currentLayer, 'visibility', 'visible');
 });
@@ -75,3 +76,25 @@ yearSelect_div.addEventListener("change", function () {
     }
 
 });
+
+document.getElementById('slider').addEventListener('input', function(e) {
+  var year = parseInt(e.target.value);
+  // update the map
+  var len = LayerIds.length;
+  for (var i = 0; i <= len; i++) {
+    var layer = LayerIds[i];
+    map.setLayoutProperty(layer, 'visibility', 'visible');
+    if layer === ""
+    
+    
+    }
+
+
+  // // converting 0-23 hour to AMPM format
+  // var ampm = hour >= 12 ? 'PM' : 'AM';
+  // var hour12 = hour % 12 ? hour % 12 : 12;
+
+  // update text in the UI
+  document.getElementById('active-year').innerText = year;
+});
+
